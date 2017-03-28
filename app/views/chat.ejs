@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ./partials/head.ejs %>
+</head>
+<body>
+  <% include ./partials/header.ejs %>
+
+  <main>
+    <div class="container-fluid">
+      <input type="hidden" id="user" value="<%= user.username %>"/>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="panel panel-success">
+            <div class="panel-heading">
+              <h4>Users List</h4>
+            </div>
+            <div class="panel-body c-p-body" id="scrl1">
+              <ul id="list"></ul>
+            </div>
+            <div class="panel-footer">
+              <p id="typing"></p>
+            </div>
+          </div>
+        </div>
+        <div class=".space"></div>
+        <div class="col-sm-8">
+          <div class="panel panel-success">
+            <div class="panel-heading">
+              <h4>Chat Room</h4>
+            </div>
+            <div class="panel-body c-p-body" id="scrl2">
+              <p id="loading">Loading.....</p>
+              <p id="noChat">No Chats To Display.....</p>
+              <ul id="messages"></ul>
+            </div>
+            <div class="panel-footer">
+              <form action="">
+                <input id="myMsg" class="input-box-send" autocomplete="off" />
+                <button class="btn btn-send"><span class="glyphicon glyphicon-send"></span></button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <% include ./partials/footer.ejs %>
+
+  <script src="/js/scriptForChat.js"></script>
+</body>
+</html>
