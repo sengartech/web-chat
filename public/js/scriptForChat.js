@@ -31,7 +31,7 @@ $ (function(){
       var txt1 = $('<span></span>').text(user).css({"font-size":"20px"});
       var txt2;
       if(stack[user] == "Online"){
-        txt2 = $('<span></span>').text(stack[user]).css({"float":"right","color":"#009933","font-size":"18px"});
+        txt2 = $('<span></span>').text("*"+stack[user]).css({"float":"right","color":"#009933","font-size":"18px"});
         totalOnline++;
       }
       else{
